@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import PropTypes from 'prop-types';
 import styles from '../styles/Message.js';

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import Message from './Message';
 import SendMessage from './SendMessage';
