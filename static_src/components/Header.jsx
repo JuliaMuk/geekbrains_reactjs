@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 import '../styles/Header.css';
+import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component{
     static proptypes = {
@@ -12,6 +13,7 @@ export default class Header extends React.Component{
     render () {
         return <header className={'header'}>
             <h1>{this.props.text}</h1>
+            <Link to='/profile' className={'link'}>Профиль</Link>
         </header>
     }
 }

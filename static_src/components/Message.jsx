@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
+
 
 import PropTypes from 'prop-types';
 import styles from '../styles/Message.js';
@@ -7,7 +7,7 @@ import styles from '../styles/Message.js';
 export default class Message extends React.Component{
     static proptypes = {
         message: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
+        author: PropTypes.string,
     };
     
 

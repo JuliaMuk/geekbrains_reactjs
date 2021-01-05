@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/Layout';
+import App from './components/Router';
 
 ReactDOM.render(
     <App />,
