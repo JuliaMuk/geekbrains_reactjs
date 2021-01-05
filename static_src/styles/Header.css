@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+    text-align: center;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.link {
+    margin-left: auto;
+}
+
+h1 {
+    margin-left: auto;
+}

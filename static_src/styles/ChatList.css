@@ -1,0 +1,20 @@
+.chat_list{
+    height: 100%;
+    width: 30%;
+    background-color: #4677b3;
+}
+.chat_list ul{
+    list-style: none;
+}
+
+.chat_list li{
+    border-bottom: rgb(49, 48, 48) solid 1px;
+    padding: 5px;
+    display: block;
+    height: 30px;    
+}
+
+.chat_list li:hover{
+    
+    background-color: lightblue;   
+}
