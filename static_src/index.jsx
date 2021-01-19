@@ -1,45 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const MessageComponent = (props) => <div>{props.value}</div>;
-const MessageField = (props) => {
-  return props.messages.map(message => <MessageComponent key={message} value={message} />);
-};
-
-class App extends React.Component {
-    constructor(props) {
-      super(props);
-      this.addMessage = this.addMessage.bind(this);
-      this.state = {
-        messages:[],
-        count: 0
-      };
-    }
-  
-    addMessage(){     
-      this.setState({
-        count: this.state.count +=1,
-        messages: this.state.messages.concat('Сообщение '+this.state.count),
-      })
-      /* console.log(this.state.messages);*/
-    }
-
-    render() {
-      return (
-        <div>          
-          <MessageField messages={ this.state.messages } />
-          <button onClick={this.addMessage}>
-            Отправить
-          </button>
-        </div>
-      );
-    }
-}
+import Router from './containers/Router'
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import initStore from './utils/store';
 
 ReactDOM.render(
-    <App />,
-    document.getElementById("root")
-)
+    <Provider store={ initStore() }>
+       <BrowserRouter>
+           <MuiThemeProvider>
+               <Router />
+           </MuiThemeProvider>
+       </BrowserRouter>
+   </Provider>,
+   document.getElementById('root'),
+);
 
 
 
