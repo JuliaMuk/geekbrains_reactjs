@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.layout {
+    margin: 0 auto;
+    width: 992px;
+}
+.layout-canvas{
+    display: flex;  
+    width: 100%;
+}
+.layout-left-side{
+    width: 200px;
+    background-color: deepskyblue;
+
+}
+.layout-right-side{
+   flex-grow: 1;
+}
