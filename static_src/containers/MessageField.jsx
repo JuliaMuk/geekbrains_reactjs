@@ -21,7 +21,8 @@ class MessageField extends React.Component {
 
    handleSendMessage = (message, sender) => {
        if (this.state.input.length > 0 || sender === 'bot') {
-           this.props.sendMessage(message, sender);
+        const messageId = Object.keys(this.props.messages).length + 1;
+        this.props.sendMessage(messageId, message, sender, this.props.chatId);
        }
        if (sender === 'me') {
            this.setState({ input: '' });
@@ -73,6 +74,7 @@ class MessageField extends React.Component {
 
 const mapStateToProps = ({ chatReducer }) => ({
     chats: chatReducer.chats,
+   
  });
  
  const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
